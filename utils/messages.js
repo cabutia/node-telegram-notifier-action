@@ -1,3 +1,7 @@
+const { jobStatus } = require('../constants')
+const core = require('@actions/core')
+const messages = require('../messages')
+
 const parseMessage = (str) => {
 	const specialChars = '(){}-'
 	specialChars.split('').forEach(char => {
@@ -19,4 +23,23 @@ module.exports.build = (message, data) => {
 		}
 	}
 	return parseMessage(_message)
+}
+
+module.exports.getMessage = () => {
+	if (core.getInput('initial')) {
+		return messages.deployStarted
+	}
+	switch (status) {
+		case jobStatus.OK:
+			return messages.deploySucceed
+		case jobStatus.FAIL:
+			return messages.deployFailed
+	}
+}
+
+module.exports.messageVars = {
+	timestamp: Date.now(),
+	deployNumber: 53,
+	branch: 'master',
+	commit: '9891305975e698c8efef30ee029bf9c6ad2d3bf4'
 }

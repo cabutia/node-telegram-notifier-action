@@ -20,10 +20,10 @@ const post = (url, data) => {
 	})
 }
 
-module.exports.sendMessage = (chatId, message) => {
+module.exports.sendMessage = (message) => {
 	const url = builder(routes.sendMessage, { botId: config.botId })
 	return post(url, {
-		chat_id: chatId,
+		chat_id: config.chatId,
 		text: message,
 		parse_mode: 'MarkdownV2'
 	})

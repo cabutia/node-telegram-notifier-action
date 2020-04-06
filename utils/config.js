@@ -1,4 +1,7 @@
+const core = require('@actions/core')
+
 module.exports = {
-	botId: '810024100:AAHgoVBPmagmc-g-Vl2D80h09WB95bFaWQ4',
-	chatId: -1001465073442
+	botId: core.getInput('bot'),
+	chatId: core.getInput('channel'),
+	initial: core.getInput('initial')
 }

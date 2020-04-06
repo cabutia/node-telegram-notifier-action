@@ -4,6 +4,15 @@ inputs:
   status:
     description: 'Job status'
     required: true
+  bot:
+    description: 'Telegram bot token'
+    required: true
+  channel:
+    description: 'Integer or string: Chat/channel id'
+    required: true
+  initial:
+    description: 'If true, deployment has just started'
+    required: false
 runs:
   using: 'node12'
   main: 'index.js'
