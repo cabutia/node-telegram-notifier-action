@@ -41,5 +41,5 @@ module.exports.selectMessage = () => {
 module.exports.messageVars = {
 	job: process.env.GITHUB_JOB,
 	repository: process.env.GITHUB_REPOSITORY,
-	commit: proccess.env.GITHUB_SHA
+	commit: process.env.GITHUB_SHA
 }
