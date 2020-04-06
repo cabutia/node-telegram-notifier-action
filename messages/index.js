@@ -1,20 +1,20 @@
 module.exports.deployStarted = `
-*Job [{{ jobName }}] started!*
+*Job [{{ job }}] started!*
 ------------------------------
 Project: {{ repository }}
-Commit: {{ sha }}
+Commit: {{ commit }}
 `
 
 module.exports.deploySucceed = `
-*Job [{{ jobName }}] success!*
+*Job [{{ job }}] success!*
 ------------------------------
 Project: {{ repository }}
-Commit: {{ sha }}
+Commit: {{ commit }}
 `
 
 module.exports.deployFailed = `
-*Job [{{ jobName }}] failed!*
+*Job [{{ job }}] failed!*
 ------------------------------
 Project: {{ repository }}
-Commit: {{ sha }}
+Commit: {{ commit }}
 `
