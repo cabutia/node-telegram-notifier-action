@@ -1,0 +1,24 @@
+{
+  "name": "NodeTelegramNotifier",
+  "version": "1.0.0",
+  "description": "Node.js based github action for notifying things to telegram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandro-grg/node-telegram-notifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandro-grg/node-telegram-notifier/issues"
+  },
+  "homepage": "https://github.com/leandro-grg/node-telegram-notifier#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  }
+}
