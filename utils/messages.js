@@ -39,8 +39,7 @@ module.exports.selectMessage = () => {
 }
 
 module.exports.messageVars = {
-	timestamp: Date.now(),
-	deployNumber: 53,
-	branch: 'master',
-	commit: '9891305975e698c8efef30ee029bf9c6ad2d3bf4'
+	job: process.env.GITHUB_JOB,
+	repository: process.env.GITHUB_REPOSITORY,
+	commit: proccess.env.GITHUB_SHA
 }

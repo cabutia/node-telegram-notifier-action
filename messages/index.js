@@ -1,22 +1,20 @@
 module.exports.deployStarted = `
-*Deployment [{{ deploymentNumber }}] started!*
-
-Deploying branch: *{{ branch }}*
-Commit: \`{{ commit }}\`
-Started at: {{ time }}
+*Job [{{ jobName }}] started!*
+------------------------------
+Project: {{ repository }}
+Commit: {{ sha }}
 `
 
 module.exports.deploySucceed = `
-*Deployment [{{ deploymentNumber }}] success!*
-
-Deploying branch: *{{ branch }}*
-Commit: \`{{ commit }}\`
-Finished at: {{ time }}
+*Job [{{ jobName }}] success!*
+------------------------------
+Project: {{ repository }}
+Commit: {{ sha }}
 `
 
 module.exports.deployFailed = `
-*Deployment [{{ deploymentNumber }}] failed!*
-
-Deploying branch: *{{ branch }}*
-Commit: \`{{ commit }}\`
+*Job [{{ jobName }}] failed!*
+------------------------------
+Project: {{ repository }}
+Commit: {{ sha }}
 `
