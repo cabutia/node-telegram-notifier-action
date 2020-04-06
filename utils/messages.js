@@ -3,7 +3,7 @@ const core = require('@actions/core')
 const messages = require('../messages')
 
 const parseMessage = (str) => {
-	const specialChars = '(){}-'
+	const specialChars = '(){}-!?'
 	specialChars.split('').forEach(char => {
 		str = str.replace(
 			new RegExp('\\' + char, 'gm'),
