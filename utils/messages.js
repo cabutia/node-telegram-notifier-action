@@ -17,7 +17,7 @@ module.exports.build = (message, data) => {
 	let _message = message
 	for (const variableName in data) {
 		if (data.hasOwnProperty(variableName)) {
-			const variableValue = data[variableName]
+			const variableValue = parseMessage(data[variableName])
 			_message = _message.replace('{{' + variableName + '}}', variableValue)
 			_message = _message.replace('{{ ' + variableName + ' }}', variableValue)
 		}
