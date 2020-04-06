@@ -10,6 +10,8 @@ const main = async () => {
 	console.log('\tStatus:    %s', core.getInput('status'))
 	console.log('\tChannel:   %s', core.getInput('channel'))
 	console.log('\tBot token: %s', core.getInput('bot'))
+	console.log('Environment:')
+	console.log(process.env)
 	// let message
 	// const deployStartedMessage = build(messages.deployStarted, {
 	// 	timestamp: Date.now(),
