@@ -11,13 +11,15 @@ const commonData = {
 }
 
 const post = (url, data) => {
-	return fetch(url, {
+	const opts = {
 		method: 'post',
 		headers: {
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify(data)
-	})
+	}
+	console.log('Fetching %s with data %s', url, opts)
+	return fetch(url, opts)
 }
 
 module.exports.sendMessage = (message) => {
