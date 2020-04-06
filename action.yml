@@ -1,9 +1,9 @@
 name: 'Telegram notifier'
 description: 'Node.js based github action for notifying things to telegram'
 inputs:
-	status:
-		description: 'Job status'
-		required: true
+  status:
+    description: 'Job status'
+    required: true
 runs:
-	using: 'node12'
-	main: 'index.js'
+  using: 'node12'
+  main: 'index.js'
