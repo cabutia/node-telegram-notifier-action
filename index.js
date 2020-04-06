@@ -10,6 +10,7 @@ const main = async () => {
 	sendMessage(msg)
 		.then(async (res) => {
 			console.log(await res.json())
+			console.log('Environment:', process.env)
 			core.setOutput('Notified!')
 		})
 		.catch(err => {
