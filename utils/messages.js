@@ -25,7 +25,7 @@ module.exports.build = (message, data) => {
 	return parseMessage(_message)
 }
 
-module.exports.getMessage = () => {
+module.exports.selectMessage = () => {
 	if (core.getInput('initial')) {
 		return messages.deployStarted
 	}
