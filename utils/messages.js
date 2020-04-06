@@ -26,6 +26,7 @@ module.exports.build = (message, data) => {
 }
 
 module.exports.selectMessage = () => {
+	const status = core.getInput('status')
 	if (core.getInput('initial')) {
 		return messages.deployStarted
 	}
