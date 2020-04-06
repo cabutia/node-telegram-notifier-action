@@ -9,7 +9,7 @@ const main = async () => {
 	const msg = build(selectMessage(), messageVars)
 	sendMessage(msg)
 		.then(async (res) => {
-			console.log(res.json())
+			console.log(await res.json())
 			core.setOutput('Notified!')
 		})
 		.catch(err => {
