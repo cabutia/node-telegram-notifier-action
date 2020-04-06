@@ -10,6 +10,9 @@ const main = async () => {
 	sendMessage(msg)
 		.then(async (res) => {
 			console.log(await res.json())
+			res.json().then(text => {
+				console.log('Response: %s', text)
+			})
 			core.setOutput('Notified!')
 		})
 		.catch(err => {
