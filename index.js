@@ -6,14 +6,14 @@ const { sendMessage } = require('./utils/api')
 const { build, selectMessage, messageVars } = require('./utils/messages')
 
 const main = async () => {
-	const message = selectMessage()
-	const variables = messageVars
-	const msg = build(message, variables)
+	const msg = build(selectMessage(), messageVars)
 	sendMessage(msg)
 		.then(async (res) => {
+			console.log(await res.json())
 			core.setOutput('Notified!')
 		})
 		.catch(err => {
+			console.log('Notification failed')
 			core.setFailed(err.message)
 		})
 }
