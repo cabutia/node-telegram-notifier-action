@@ -8,11 +8,8 @@ const { build, selectMessage, messageVars } = require('./utils/messages')
 const main = async () => {
 	const msg = build(selectMessage(), messageVars)
 	sendMessage(msg)
-		.then(async (res) => {
-			console.log(await res.json())
-			res.json().then(text => {
-				console.log('Response: %s', text)
-			})
+		.then(res => {
+			console.log('Notified!')
 			core.setOutput('Notified!')
 		})
 		.catch(err => {
