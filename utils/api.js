@@ -6,10 +6,6 @@ const routes = {
 	sendMessage: '/bot<botId>/sendMessage'
 }
 
-const commonData = {
-	parse_mode: 'MarkdownV2'
-}
-
 const post = (url, data) => {
 	const opts = {
 		method: 'post',
